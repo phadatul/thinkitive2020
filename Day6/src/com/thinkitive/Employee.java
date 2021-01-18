@@ -4,6 +4,7 @@ public class Employee implements Comparable<Employee> {
 	private int empid;
 	private String ename;
 	private int salary;
+	private Address address;
 
 	public Employee() {
 		// TODO Auto-generated constructor stub
@@ -14,6 +15,15 @@ public class Employee implements Comparable<Employee> {
 		this.empid = empid;
 		this.ename = ename;
 		this.salary = salary;
+	}
+	
+
+	public Employee(int empid, String ename, int salary, Address address) {
+		super();
+		this.empid = empid;
+		this.ename = ename;
+		this.salary = salary;
+		this.address = address;
 	}
 
 	public int getEmpid() {
@@ -40,10 +50,19 @@ public class Employee implements Comparable<Employee> {
 		this.salary = salary;
 	}
 
+public Address getAddress() {
+	return address;
+}
+public void setAddress(Address address) {
+	this.address = address;
+}
+
+
+
 	@Override
-	public String toString() {
-		return "[empid=" + empid + ", ename=" + ename + ", salary=" + salary + "]";
-	}
+public String toString() {
+	return "[empid=" + empid + ", ename=" + ename + ", salary=" + salary + ", address=" + address + "]";
+}
 
 	@Override
 	public int hashCode() {
