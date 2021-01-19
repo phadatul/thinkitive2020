@@ -9,9 +9,13 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 public class Employee implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;  //IF any change in class then change value of this else keep it same
 	private int empid;
-	private String ename;
-	private int salary;
+	transient private String ename;
+	transient private int salary;
 
 	public Employee() {
 		// TODO Auto-generated constructor stub
@@ -122,4 +126,6 @@ public class Employee implements Serializable {
 
 		return e;
 	}
+
+
 }
