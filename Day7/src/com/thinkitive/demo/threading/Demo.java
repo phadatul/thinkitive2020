@@ -10,6 +10,8 @@ public class Demo {
 		m1.setName("TABLE1 ");
 		m2.setName("TABLE2 ");
 
+		
+		m1.setDaemon(true);
 		m2.setPriority(10);
 		m1.start();
 		m2.start();
