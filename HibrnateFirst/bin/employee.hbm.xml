@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+
+	<class name="com.thinkitive.Employee" table="demoemployee">
+		<id name="empid" column="empid" type="int">
+			<generator class="assigned"></generator>
+		</id>
+
+		<property name="ename" column="ename" type="string"></property>
+		<property name="salary" column="salary" type="int"></property>
+
+	</class>
+
+	
+
+
+</hibernate-mapping> 
