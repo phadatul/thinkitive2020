@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="emp" class="com.thinkitive.Employee">
+		<property name="empid" value="12"></property>
+		<property name="name" value="Hello"></property>
+		<property name="skills">
+			<list>
+				<value>Java</value>
+				<value>Python</value>
+				<value>Kotlin</value>
+			</list>
+
+
+		</property>
+		<property name="address" ref="adr"></property>
+	</bean>
+
+	<bean id="hi" class="com.thinkitive.EmployeeFactory"></bean>
+
+	<bean id="adr" class="com.thinkitive.Address">
+	<constructor-arg name="city" value="Pune"></constructor-arg>
+	<constructor-arg name="pincode" value="411028"></constructor-arg>
+	</bean>
+</beans>
