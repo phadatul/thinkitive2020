@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var x = "none";
+
+        function hello() {
+            var temp = document.getElementById("mytxt").value;
+            document.getElementById("mypara").style.background = "red";
+            if (x == "none") {
+                x = "block";
+
+                document.getElementById("mypara").style.display = x;
+            } else {
+                x = "none";
+
+                document.getElementById("mypara").style.display = x;
+            }
+
+        }
+
+        function bye() {
+            document.write("bye bye");
+        }
+    </script>
+</head>
+
+<body>
+    <input id="mytxt" type="text" />
+    <button onclick="hello()">Okay</button>
+
+    <p id="mypara">THIS IS PARAGRAPH</p>
+</body>
+
+</html>

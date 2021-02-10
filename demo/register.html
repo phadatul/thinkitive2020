@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate() {
+            var x = document.getElementById("txtusername").value;
+            if (x == "admin")
+                return true;
+            else
+                return false;
+        }
+    </script>
+</head>
+
+<body>
+
+    <form action="http://www.google.com/" onsubmit="return validate()">
+        <input type="text" id="txtusername" name="txtusername">
+        <br>
+        <input type="submit">
+
+
+    </form>
+</body>
+
+</html>
