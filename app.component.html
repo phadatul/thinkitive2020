@@ -1,0 +1,24 @@
+<div>
+
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li *ngIf="isadmin"><a href="#about">About</a></li>
+    </ul>
+</div>
+
+<h1>
+
+    Even binding</h1>
+
+<input type="text" [(ngModel)]="mytext"> <br />
+<button class="btn btn-danger" (click)="changeText()">ok</button>
+
+
+
+<p [class]="myclass">{{mytext}}</p>
+<h3>TEMPLATE DRIVEN FORM</h3>
+<app-login></app-login>
+<h3>MODEL DRIVEN FORM</h3>
+<app-about></app-about>
