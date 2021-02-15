@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { MydataService } from './mydata.service';
 
 @Component({
   selector: 'app-root',
@@ -6,16 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isadmin=false;
-  title:any = 'My First Angular Project';
-  x:string[]=["Pune","Mumbai","Nagpur","Delhi","Nasik","Bengaluru"];
-  mytext="hello this is text";
-  myclass="myclass1";
+  title = 'hellorouting';
+constructor(private myservice:MydataService){
 
-  changeText(){
-    alert(this.mytext);
-    this.mytext=this.mytext.toUpperCase();
-    this.myclass="myclass2";
-    this.isadmin=true;
-  }
+}
+
+
+user:string="";
 }

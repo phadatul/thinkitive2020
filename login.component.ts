@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MydataService } from '../mydata.service';
 
 @Component({
   selector: 'app-login',
@@ -6,12 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
+user:string="";
+  constructor(private myservice:MydataService) { }
 
   ngOnInit(): void {
+    this.user=this.myservice.getData();
   }
-  mymethod(data:any){
-    alert(data.email+" "+data.username);
-  }
+
 }
